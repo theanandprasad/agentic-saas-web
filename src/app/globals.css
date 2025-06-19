@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+/* Font variables */
+:root {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -25,23 +23,60 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer base {
+/* Basic heading styles */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Responsive heading styles */
+@media (min-width: 768px) {
   h1 {
-    @apply text-4xl font-bold md:text-5xl;
+    font-size: 3rem;
   }
+
   h2 {
-    @apply text-3xl font-bold md:text-4xl;
+    font-size: 2.25rem;
   }
+
   h3 {
-    @apply text-2xl font-bold md:text-3xl;
+    font-size: 1.875rem;
   }
+
   h4 {
-    @apply text-xl font-bold md:text-2xl;
+    font-size: 1.5rem;
   }
+
   h5 {
-    @apply text-lg font-bold md:text-xl;
+    font-size: 1.25rem;
   }
+
   h6 {
-    @apply text-base font-bold md:text-lg;
+    font-size: 1.125rem;
   }
 }
